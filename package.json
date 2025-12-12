@@ -1,6 +1,24 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "express": "^5.2.1",
     "mongodb": "^7.0.0"
+=======
+  "name": "devtinder",
+  "version": "1.0.0",
+  "description": "tinder for dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript"
+  ],
+  "author": "devesh singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+>>>>>>> e1d5af9 (add new file)
   }
 }
