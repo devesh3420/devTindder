@@ -9,7 +9,8 @@
   "description": "tinder for dev",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js",
+    "dev" : "nodemon src/app.js"
   },
   "keywords": [
     "nodejs",
@@ -18,7 +19,12 @@
   "author": "devesh singh",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "express": "^5.2.1"
 >>>>>>> e1d5af9 (add new file)
+=======
+    "express": "^5.2.1",
+    "mongoose": "^9.0.1"
+>>>>>>> 79882e8 (add databace and data)
   }
 }
