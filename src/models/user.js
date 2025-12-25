@@ -14,8 +14,11 @@ const userSchema = new mongoose.Schema({
         type:Number
     },
     gender : {
-        type : Number
-    }
+        type : String
+    },
+    emailId : {
+         type : String
+        }
 })
 
 
