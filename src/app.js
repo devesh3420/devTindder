@@ -23,16 +23,23 @@ app.post("/signup", async (req, res) => {
         });
     }
 });
-
-// app.get("/adminData", async(req,res)=>{
-//     const userId = (req.body.userId);
-//     try{
-//     const user =  await user.findById({userId});
-//     res.send(user)
-//     } catch(err){
-//     res.status(401).send("something is wrong!!");
-//     }
-// })
+app.post("/addNews",async(req,res)=>{
+    try {
+        const user = new User(req.body);
+        await user.save();
+    } catch (error) {
+        res.status(401).send("something is wrong!!");
+    }
+})
+app.get("/adminData", async(req,res)=>{
+    const userId = (req.body.userId);
+    try{
+    const user =  await user.findById({userId});
+    res.send(user)
+    } catch(err){
+    res.status(401).send("something is wrong!!");
+    }
+})
 
 app.delete("/user",async(req,res)=>{
     const userId = req.body.userId;
@@ -57,20 +64,20 @@ try {
 
 })
 
+app.
 
-
-// app.get("/feed", async(req,res)=>{
-//     const userEmail = (req.body.emailId);
-//     try{
-//         const users = await User.findOne({emailId: userEmail});
-//         if(users === 0){
-//              res.status(401).send("something is wrong!!");
-//         }
-//      res.send(users)
-//     }catch(err){
-//       res.status(401).send("something is wrong!!");
-//     }
-// })
+app.get("/feed", async(req,res)=>{
+    const userEmail = (req.body.emailId);
+    try{
+        const users = await User.findOne({emailId: userEmail});
+        if(users === 0){
+             res.status(401).send("something is wrong!!");
+        }
+     res.send(users)
+    }catch(err){
+      res.status(401).send("something is wrong!!");
+    }
+})
 
 connectDb()
     .then(() => {
